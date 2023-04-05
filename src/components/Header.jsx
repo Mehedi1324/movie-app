@@ -97,14 +97,12 @@ const Header = () => {
         <div
           className={` md:inline  ${
             mobileMenu
-              ? 'absolute  left-0 px-10 top-14 w-full z-10 py-4 bg-gray-900 transition ease-out delay-150'
+              ? 'absolute  left-0 px-10 top-10 w-full z-10 py-4 bg-gray-900 '
               : 'hidden'
           } `}
         >
           <span
-            className={`${
-              mobileMenu && 'flex-col space-x-0 space-y-3'
-            } flex space-x-5 `}
+            className={`${mobileMenu && 'flex-col space-y-3'} flex space-x-5 `}
           >
             <li
               onClick={() => navigateHandler('movie')}
@@ -135,7 +133,7 @@ const Header = () => {
         </li>
       </ul>
       <div
-        className={`absolute top-2 ${
+        className={`absolute top-10 ${
           showSearch
             ? 'absolute w-full h-10 left-0 right-0 top-10 z-10'
             : 'hidden'

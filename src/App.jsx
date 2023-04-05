@@ -30,7 +30,7 @@ function App() {
   }, []);
   return (
     <BrowserRouter>
-      <div className="h-full ">
+      <div className="h-screen overflow-scroll bg-gray-900">
         <Header />
         <Routes>
           <Route element={<Home />} path="/" />

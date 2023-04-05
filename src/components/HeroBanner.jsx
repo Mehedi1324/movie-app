@@ -24,14 +24,14 @@ const HeroBanner = () => {
   };
 
   return (
-    <div className=" relative bg-gray-900  w-full h-[450px] m-0  ">
+    <div className=" relative flex items-center top-0 bg-gray-900  w-full h-[450px] m-0  ">
       {!loading && (
-        <div className="absolute top-0 object-cover object-center w-full h-full overflow-hidden opacity-40 blur-0">
-          <LazyLoading className="w-[100%]" src={bannerBg} />
+        <div className="absolute top-0 object-center w-full h-full overflow-hidden bg-black opacity-40 blur-0">
+          <LazyLoading className="w-[100%] " src={bannerBg} />
         </div>
       )}
-      <div className="w-full h-[250px]  bg-gradient-to-t   from-gray-900  md:to-transparent md:blur-none  absolute bottom-0 left-0"></div>
-      <div className="absolute flex flex-col items-center justify-center w-full h-full text-white ">
+      <div className="w-full h-[250px]  bg-gradient-to-t   from-gray-900   md:blur-none  absolute bottom-0 left-0"></div>
+      <div className="relative flex flex-col items-center justify-center w-full h-full text-white ">
         <div className="flex flex-col items-center space-y-3">
           <span className="text-3xl font-bold md:text-7xl">Welcome</span>
           <span className="text-center text-md">
