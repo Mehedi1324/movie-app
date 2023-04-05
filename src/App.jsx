@@ -8,8 +8,8 @@ import Error from './pages/Error';
 import Details from './pages/Details';
 import Explore from './pages/Explore';
 import SearchResults from './pages/SearchResuls';
-// import Header from './components/Header';
-// import Footer from './components/Footer';
+import Header from './components/Header';
+import Footer from './components/Footer';
 
 function App() {
   const dispatch = useDispatch();
@@ -30,15 +30,17 @@ function App() {
   }, []);
   return (
     <BrowserRouter>
-      {/* <Header /> */}
-      <Routes>
-        <Route element={<Home />} path="/" />
-        <Route element={<Details />} path="/:mediaType/:id" />
-        <Route element={<SearchResults />} path="/search/:query" />
-        <Route element={<Explore />} path="/explore/:mediaType" />
-        <Route element={<Error />} path="*" />
-      </Routes>
-      {/* <Footer /> */}
+      <div className="h-full ">
+        <Header />
+        <Routes>
+          <Route element={<Home />} path="/" />
+          <Route element={<Details />} path="/:mediaType/:id" />
+          <Route element={<SearchResults />} path="/search/:query" />
+          <Route element={<Explore />} path="/explore/:mediaType" />
+          <Route element={<Error />} path="*" />
+        </Routes>
+        <Footer />
+      </div>
     </BrowserRouter>
   );
 }

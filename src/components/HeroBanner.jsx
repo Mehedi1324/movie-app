@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import '../styles/compStyles/HeroBanner.scss';
 import { useNavigate } from 'react-router-dom';
 import useFetch from '../hooks/useFetch';
 import { useSelector } from 'react-redux';
 import LazyLoading from './LazyLoading';
-import ContentWrapper from './ContentWrapper';
 const HeroBanner = () => {
   const navigate = useNavigate();
   const [bannerBg, setBannerBg] = useState('');
@@ -26,30 +24,34 @@ const HeroBanner = () => {
   };
 
   return (
-    <div className="hero__banner">
+    <div className=" relative bg-gray-900  w-full h-[450px] m-0  ">
       {!loading && (
-        <div className="backdrop__img">
-          <LazyLoading src={bannerBg} />
+        <div className="absolute top-0 object-cover object-center w-full h-full overflow-hidden opacity-40 blur-0">
+          <LazyLoading className="w-[100%]" src={bannerBg} />
         </div>
       )}
-      <div className="opacity__layer"></div>
-      <ContentWrapper>
-        <div className="banner__content">
-          <span className="title">Welcome</span>
-          <span className="subtitle">
-            Mellions of movies, TV Shows and people to discover. Explore now !
+      <div className="w-full h-[250px]  bg-gradient-to-t   from-gray-900  md:to-transparent md:blur-none  absolute bottom-0 left-0"></div>
+      <div className="absolute flex flex-col items-center justify-center w-full h-full text-white ">
+        <div className="flex flex-col items-center space-y-3">
+          <span className="text-3xl font-bold md:text-7xl">Welcome</span>
+          <span className="text-center text-md">
+            Mellions of movies, TV Shows and people to discover.{' '}
+            <span className="text-red-400">Explore now !</span>
           </span>
-          <div className="searchInput">
+
+          {/* ------------ */}
+          <div className="w-[80%] h-9 relative rounded-full overflow-hidden">
             <input
+              className="w-[80%] h-full p-4 outline-none text-gray-900"
               type="text"
               onChange={(e) => setQuery(e.target.value)}
               onKeyUp={searchQueryHandler}
               placeholder="Search for movie or tv show..."
             />
-            <button>Search</button>
+            <button className="bg-red-400 h-full w-[20%]">Search</button>
           </div>
         </div>
-      </ContentWrapper>
+      </div>
     </div>
   );
 };
