@@ -87,8 +87,8 @@ const Header = () => {
   return (
     <div
       className={`${
-        show ? `relative ${menuBgSolid}` : 'hidden '
-      }   w-full backdrop-brightness-75 backdrop-blur-lg  sticky top-0 flex  items-center z-10  text-[14px] justify-between px-5 text-white m-0  `}
+        show ? `fixed ${menuBgSolid}` : 'hidden '
+      }   w-full backdrop-brightness-75 backdrop-blur-lg   top-0 flex  items-center z-10  text-[14px] justify-between px-5 text-white m-0  `}
     >
       <div onClick={() => navigate('/')} className="cursor-pointer">
         <img src="/public/images/movix-logo.svg" alt="logo" />
