@@ -7,7 +7,7 @@ import {
 } from 'react-icons/fa';
 const Footer = () => {
   return (
-    <div className="w-full p-10 m-auto text-center  bg-gray-950">
+    <div className="w-full p-10 m-auto text-center bg-gray-950">
       <div className="flex flex-col justify-center w-full mx-auto space-y-8 text-white">
         <ul className="flex justify-center space-x-5 text-[12px] md:text-lg">
           <li className="cursor-pointer hover:text-red-600">Terms of Use</li>
