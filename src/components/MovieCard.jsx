@@ -22,7 +22,7 @@ const MovieCard = ({ data, fromSearch, mediaType }) => {
         <div className="rounded-lg bg-blue-500/30 shadow-custom-gray">
           <LazyLoading className="h-full rounded-md " src={posterUrl} />
         </div>
-        <div className="absolute z-10 -bottom-2 left-3">
+        <div className="absolute -bottom-2 left-3">
           <CircleRating rating={data?.vote_average.toFixed(1)} />
         </div>
         <div className="absolute bottom-0 right-0 ">

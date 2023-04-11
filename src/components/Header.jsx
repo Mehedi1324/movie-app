@@ -133,10 +133,8 @@ const Header = () => {
         </li>
       </ul>
       <div
-        className={`absolute top-10 ${
-          showSearch
-            ? 'absolute w-full h-10 left-0 right-0 -top-0 z-10'
-            : 'hidden'
+        className={`absolute -top-0 ${
+          showSearch ? 'absolute w-full h-10 left-0 right-0  z-10' : 'hidden'
         }`}
       >
         <input

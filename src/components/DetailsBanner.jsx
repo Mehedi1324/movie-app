@@ -35,17 +35,17 @@ const DetailsBanner = ({ video, crew }) => {
     return `${hours}h${min > 0 ? `${min}m` : ''}`;
   };
   return (
-    <div className={`text-white `}>
+    <div className="text-white ">
       {!loading ? (
         <>
           {!!data && (
             <React.Fragment>
-              <div className="bg-black">
+              <div className="bg-black ">
                 <LazyLoading src={url.backdrop + data?.backdrop_path} />
               </div>{' '}
               <div className="opacity_layer"></div>
               {/* _____Descriptions____ */}
-              <div className="flex flex-col md:flex-row w-[90%] mx-auto h-auto pt-10 ">
+              <div className="flex top-0 flex-col md:flex-row w-[90%] mx-auto h-auto pt-10 ">
                 {/*_______________________ Banner bg and poster img________________ */}
 
                 <div className="md:w-[40%] w-full">

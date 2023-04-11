@@ -115,12 +115,12 @@ const Explore = () => {
   // _________Return Statement______________
 
   return (
-    <div className="w-[90%] pt-3 m-auto">
+    <div className="w-[90%] pt-20 m-auto">
       <div className="flex flex-col items-center justify-between space-y-3 md:flex-row md:space-y-0">
         <div className="text-white">
           {mediaType === 'tv' ? 'Explore TV Shows' : 'Explore Movies'}
         </div>
-        <div className="grid w-full md:w-[60%] grid-cols-1 space-y-2 md:grid-cols-2 md:space-x-2 md:space-y-0">
+        <div className="grid bg-black w-full md:w-[60%] grid-cols-1 space-y-2 md:grid-cols-2 md:space-x-2 md:space-y-0">
           <Select
             isMulti
             name="genres"
@@ -131,7 +131,7 @@ const Explore = () => {
             getOptionValue={(option) => option.id}
             onChange={onChange}
             placeholder="Select genres"
-            className="w-full"
+            className="w-full "
             classNamePrefix="react-select"
           />
           <Select
