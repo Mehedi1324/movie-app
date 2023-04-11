@@ -12,7 +12,7 @@ const Popular = () => {
   };
   return (
     <div
-      className="relative space-y-8 text-white/50 w-[90%] mx-auto
+      className="relative space-y-6 text-white/50 w-[90%] mx-auto
   "
     >
       <div className="flex items-center justify-between">

@@ -40,7 +40,7 @@ const SearchResuls = () => {
   }, [query]);
 
   return (
-    <div className="text-white">
+    <div className="w-[90%]  m-auto text-white">
       {loading && <Spinner />}
       {!loading && (
         <div>
@@ -52,12 +52,18 @@ const SearchResuls = () => {
                 next={fetchNextPageData}
                 hasMore={pageNum <= data?.total_pages}
                 loader={<Spinner />}
+                className="grid grid-cols-2 gap-8 my-10 text-white md:grid-cols-3 lg:grid-cols-5"
               >
                 {data?.results?.map((item, index) => {
                   if (item?.media_type === 'person') return;
                   return (
-                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
-                      <MovieCard key={index} data={item} fromSearch={true} />
+                    <div>
+                      <MovieCard
+                        className=""
+                        key={index}
+                        data={item}
+                        fromSearch={true}
+                      />
                     </div>
                   );
                 })}

@@ -135,12 +135,12 @@ const Header = () => {
       <div
         className={`absolute top-10 ${
           showSearch
-            ? 'absolute w-full h-10 left-0 right-0 top-10 z-10'
+            ? 'absolute w-full h-10 left-0 right-0 -top-0 z-10'
             : 'hidden'
         }`}
       >
         <input
-          className="w-full h-full p-5 text-gray-900 outline-none"
+          className="w-full h-full text-[16px] p-6  text-black outline-none"
           type="text "
           onChange={(e) => setQuery(e.target.value)}
           onKeyUp={searchQueryHandler}
@@ -150,13 +150,13 @@ const Header = () => {
         />
         <p
           onClick={clearSearch}
-          className="cursor-pointer absolute p-1 text-[10px] font-bold text-white bg-gray-900 hover:bg-red-700 right-14 top-2"
+          className="cursor-pointer absolute p-2 text-[10px] font-bold text-white bg-gray-900  right-14 top-2"
         >
           Clear
         </p>
         <p
           onClick={() => setShowSearch(false)}
-          className="cursor-pointer absolute p-1 text-[10px] font-bold text-white bg-gray-900  hover:bg-red-700 right-3 top-2"
+          className="cursor-pointer absolute p-2 text-[10px] font-bold text-white   bg-red-700 right-3 top-2"
         >
           Close
         </p>

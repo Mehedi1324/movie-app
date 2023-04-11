@@ -19,7 +19,7 @@ const SwitchTab = ({ data, onTabChange }) => {
           <span key={index}>
             <button
               onClick={() => handleClickBtn(tab, index)}
-              className={` w-[100px] h-[30px]  rounded-full
+              className={` md:w-[100px] md:h-[30px] w-[80px] h-[25px] text-[14px] md:text-[16px]  rounded-full
                ${
                  tab == active &&
                  'bg-gradient-to-r from-green-700 to-orange-700 font-bold text-white'

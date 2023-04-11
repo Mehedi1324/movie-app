@@ -44,8 +44,7 @@ const Carousel = ({ data, loading, endpoint, title }) => {
 
   // React slick setup_____________
   var settings = {
-    dots: true,
-    infinite: false,
+    infinite: true,
     speed: 500,
     slidesToShow: 5,
     slidesToScroll: 5,
