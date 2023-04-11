@@ -87,7 +87,7 @@ const Header = () => {
   return (
     <div
       className={`${
-        show ? `sticky ${menuBgSolid}` : 'hidden'
+        show ? `fixed ${menuBgSolid}` : 'hidden'
       }   w-full backdrop-brightness-75 backdrop-blur-lg left-0  top-0 flex  items-center z-10  text-[14px] justify-between px-5 text-white m-0  py-2`}
     >
       <div onClick={() => navigate('/')} className="cursor-pointer">

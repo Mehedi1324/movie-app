@@ -64,7 +64,7 @@ const DetailsBanner = ({ video, crew }) => {
 
                 {/*_______________________ */}
 
-                <div className="w-[60%] p-5 space-y-4">
+                <div className="md:w-[60%] p-5 space-y-4">
                   {/*_________ Title___________ */}
 
                   <div className="text-[25px] md:text-[35px] font-bold">

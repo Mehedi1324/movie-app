@@ -9,7 +9,7 @@ const Recomendations = ({ mediaType, id }) => {
   const title = mediaType === 'tv' ? 'Similar Tv Shows' : 'Similar Movies';
   return (
     <div
-      className="relative space-y-8 text-white/50 w-[90%] mx-auto
+      className="relative space-y-6 my-10 text-white/50 w-[90%] mx-auto
   "
     >
       <div className="flex items-center justify-between">
