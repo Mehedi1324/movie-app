@@ -9,7 +9,7 @@ import PosterFallBack from '../../public/images/no-poster.png';
 import dayjs from 'dayjs';
 import CircleRating from './CircleRating';
 import Genres from './Genres';
-const Carousel = ({ data, loading, endpoint }) => {
+const Carousel = ({ data, loading, endpoint, title }) => {
   const navigate = useNavigate();
   const { url } = useSelector((state) => state.home);
 
@@ -21,6 +21,7 @@ const Carousel = ({ data, loading, endpoint }) => {
         role="status"
         className="  rounded shadow animate-pulse p-[8%] dark:border-gray-700"
       >
+        {title && <div>{title}</div>}
         <div className="flex items-center justify-center h-48 mb-4 bg-gray-300 rounded dark:bg-gray-700">
           <svg
             className="w-12 h-12 text-gray-200 dark:text-gray-600"
