@@ -5,7 +5,7 @@ import Popular from '../components/Popular';
 import TopRated from '../components/TopRated';
 const Home = () => {
   return (
-    <div className="space-y-12 pb-14">
+    <div className="space-y-8 pb-14">
       <HeroBanner />
       <Trending />
       <Popular />

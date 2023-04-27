@@ -11,7 +11,7 @@ const SearchResuls = () => {
   const [pageNum, setPageNum] = useState(1);
   const [loading, setLoading] = useState(false);
   const { query } = useParams();
-  const fetchInitailData = () => {
+  const fetchInitialData = () => {
     setLoading(true);
     fetchData(`/search/multi?query=${query}&page=${pageNum}`).then((res) => {
       setData(res);
@@ -36,7 +36,7 @@ const SearchResuls = () => {
 
   useEffect(() => {
     setPageNum(1);
-    fetchInitailData();
+    fetchInitialData();
   }, [query]);
 
   return (

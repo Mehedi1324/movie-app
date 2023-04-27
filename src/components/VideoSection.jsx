@@ -13,7 +13,7 @@ const VideoSection = ({ data, loading }) => {
   };
 
   return (
-    <div className="text-white/50 w-[90%] overflow-x-scroll m-auto my-14 space-y-6 m">
+    <div className="text-white/50 w-[90%] overflow-x-scroll m-auto my-10 space-y-6 m">
       <div>
         <h1 className="text-3xl font-bold">Official Videos</h1>
       </div>

@@ -8,19 +8,19 @@ const Cast = ({ data, loading }) => {
     return <div>Skeloton</div>;
   };
   return (
-    <div className="w-[90%] space-y-6 my-14 overflow-y-scroll m-auto">
+    <div className="w-[90%] space-y-6 my-10  m-auto">
       <h1 className="text-3xl font-bold text-white/50 ">Top Cast</h1>
       {!loading ? (
-        <div className="flex space-x-6 text-white">
+        <div className="flex w-full space-x-6 overflow-x-scroll text-white ">
           {data?.map((item) => {
             let imgUrl = item.profile_path
               ? url.profile + item.profile_path
               : avatar;
             return (
-              <div key={item.id} className="">
+              <div key={item.id} className="bg-black">
                 <div className="">
                   <LazyLoading
-                    className="w-32 h-32 text-center rounded-3xl"
+                    className="w-full text-center rounded-3xl"
                     src={imgUrl}
                   />
                 </div>

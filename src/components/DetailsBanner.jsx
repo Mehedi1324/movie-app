@@ -40,15 +40,19 @@ const DetailsBanner = ({ video, crew }) => {
         <>
           {!!data && (
             <React.Fragment>
-              <div className="bg-black ">
-                <LazyLoading src={url.backdrop + data?.backdrop_path} />
-              </div>{' '}
-              <div className="opacity_layer"></div>
               {/* _____Descriptions____ */}
-              <div className="flex top-0 flex-col md:flex-row w-[90%] mx-auto h-auto pt-10 ">
+              <div
+                style={{
+                  filter: '',
+                  background: `linear-gradient(rgb(47 71 69 / 90%), rgb(18 30 50 / 89%)), url(${
+                    url.backdrop + data?.backdrop_path
+                  })`,
+                }}
+                className="flex  flex-col md:flex-row w-[100%] mx-auto h-auto pt-12 lg:pt-16 "
+              >
                 {/*_______________________ Banner bg and poster img________________ */}
 
-                <div className="md:w-[40%] w-full">
+                <div className="md:w-[40%] w-full ">
                   {data?.poster_path ? (
                     <div className="p-5 w-[100%] lg:w-[80%] mx-auto">
                       {' '}
@@ -96,7 +100,7 @@ const DetailsBanner = ({ video, crew }) => {
 
                   {/*___________________ Overview______________ */}
                   <div className="pb-2">
-                    <div className="text-[30px] text-white/70 font-bold">
+                    <div className="text-[30px] text-white/90 font-bold">
                       Overview
                     </div>
                     <span className="pt-2 text-white/50">{data.overview}</span>
@@ -105,17 +109,17 @@ const DetailsBanner = ({ video, crew }) => {
                   {/* __________Status____________________ */}
 
                   <div className="">
-                    <div className="mt-10  text-white/80 flex space-x-6 border-b-[2px] border-b-orange-100/10 pb-3">
+                    <div className="mt-10  text-white/90 flex space-x-6 border-b-[2px] border-b-orange-100/10 pb-3">
                       {data.status && (
                         <div>
                           <span>Status : </span>
-                          <span className="text-white/30">{data.status}</span>
+                          <span className="text-white/40">{data.status}</span>
                         </div>
                       )}
                       {data.release_date && (
                         <div>
                           <span>Release Date: </span>
-                          <span className="text-white/30">
+                          <span className="text-white/40">
                             {dayjs(data.release_date).format('MMM D, YYYY')}
                           </span>
                         </div>
@@ -123,7 +127,7 @@ const DetailsBanner = ({ video, crew }) => {
                       {data.runtime && (
                         <div>
                           <span>Runtime : </span>
-                          <span className="text-white/30">
+                          <span className="text-white/40">
                             {toHoursAndMinutes(data.runtime)}
                           </span>
                         </div>
@@ -133,7 +137,7 @@ const DetailsBanner = ({ video, crew }) => {
                   {director?.length > 0 && (
                     <div className="text-white/90 border-b-[2px] border-b-orange-100/10 pb-3">
                       <span>Director : {''}</span>
-                      <span className="text-white/30">
+                      <span className="text-white/40">
                         {director?.map((d, i) => (
                           <span key={i}>
                             {d.name} {director.length - 1 !== i && ', '}
@@ -145,7 +149,7 @@ const DetailsBanner = ({ video, crew }) => {
                   {writer?.length > 0 && (
                     <div className=" text-white/90 border-b-[2px] border-b-orange-100/10 pb-3">
                       <span>Writer : {''}</span>
-                      <span className="text-white/30">
+                      <span className="text-white/40">
                         {writer?.map((d, i) => (
                           <span key={i}>
                             {d.name} {writer.length - 1 !== i && ', '}
@@ -157,7 +161,7 @@ const DetailsBanner = ({ video, crew }) => {
                   {data?.created_by?.length > 0 && (
                     <div className="text-white/90 border-b-[2px] border-b-orange-100/10 pb-3">
                       <span>Creator : {''}</span>
-                      <span className="text-white/30">
+                      <span className="text-white/40">
                         {data?.created_by?.map((d, i) => (
                           <span key={i}>
                             {d.name}{' '}

@@ -49,7 +49,7 @@ const Explore = () => {
 
   // Fetch first page data_________________________________
 
-  const fetchInitailData = () => {
+  const fetchInitialData = () => {
     setLoading(true);
     fetchData(`/discover/${mediaType}`, filters).then((res) => {
       setData(res);
@@ -82,7 +82,7 @@ const Explore = () => {
     setPageNum(1);
     setSortby(null);
     setGenre(null);
-    fetchInitailData();
+    fetchInitialData();
   }, [mediaType]);
 
   // _______________________________________________
@@ -109,7 +109,7 @@ const Explore = () => {
     }
 
     setPageNum(1);
-    fetchData();
+    fetchInitialData();
   };
 
   // _________Return Statement______________

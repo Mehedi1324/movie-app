@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 const SwitchTab = ({ data, onTabChange }) => {
   const [active, setActive] = useState(data[0]);
-  console.log(data);
+
   const handleClickBtn = (tab, index) => {
     onTabChange(tab);
     if (tab === data[0]) {

@@ -19,11 +19,12 @@ const Header = () => {
     window.scrollTo(0, 0);
   }, [location]);
 
+  console.log(window.scrollY);
   // On scroll menu hide or show ______________
 
   const controlNavbar = () => {
     if (window.scrollY > 200) {
-      setMenuBgSolid('bg-gray-900');
+      setMenuBgSolid('bg-gray-700 shadow-custom-gray');
       if (window.scrollY > lastScrollY && !mobileMenu) {
         setShow(false);
       } else {
@@ -91,18 +92,20 @@ const Header = () => {
       }   w-full backdrop-brightness-75 backdrop-blur-lg left-0  top-0 flex  items-center z-10  text-[14px] justify-between px-5 text-white m-0  py-2`}
     >
       <div onClick={() => navigate('/')} className="cursor-pointer">
-        <img src="/public/images/movix-logo.svg" alt="logo" />
+        <img src="/public/images/movie.png" alt="logo" />
       </div>
       <ul className="flex items-center space-x-5 ">
         <div
           className={` md:inline  ${
             mobileMenu
-              ? 'absolute  left-0 px-10 top-10 w-full z-10 py-4 bg-gray-900 '
+              ? 'absolute  left-0 px-10 top-14 w-full z-10 py-4 bg-gray-900 '
               : 'hidden'
           } `}
         >
           <span
-            className={`${mobileMenu && 'flex-col space-y-3'} flex space-x-5 `}
+            className={`${
+              mobileMenu && 'flex-col space-y-3 space-x-0'
+            } flex space-x-5 `}
           >
             <li
               onClick={() => navigateHandler('movie')}
