@@ -6,11 +6,15 @@ const Recomendations = ({ mediaType, id }) => {
   const { data, loading, error } = useFetch(
     `/${mediaType}/${id}/recommendations`
   );
+  console.log(data);
   const title = mediaType === 'tv' ? 'Similar Tv Shows' : 'Similar Movies';
   return (
     <div
-      className="relative space-y-6 my-10 text-white/50 w-[90%] mx-auto
-  "
+      className={`${
+        data?.results?.length === 0
+          ? 'hidden'
+          : 'relative space-y-6 my-10 text-white/50 w-[90%] mx-auto'
+      } `}
     >
       <div className="flex items-center justify-between">
         <span className="text-3xl font-bold">Recommended For you</span>

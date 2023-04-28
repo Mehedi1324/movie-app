@@ -11,21 +11,23 @@ const Cast = ({ data, loading }) => {
     <div className="w-[90%] space-y-6 my-10  m-auto">
       <h1 className="text-3xl font-bold text-white/50 ">Top Cast</h1>
       {!loading ? (
-        <div className="flex w-full space-x-6 overflow-x-scroll text-white ">
+        <div className="flex w-full space-x-6 overflow-x-scroll text-white md:space-x-8 ">
           {data?.map((item) => {
             let imgUrl = item.profile_path
               ? url.profile + item.profile_path
               : avatar;
             return (
-              <div key={item.id} className="bg-black">
-                <div className="">
+              <div key={item.id} className="">
+                <div className="w-32">
                   <LazyLoading
-                    className="w-full text-center rounded-3xl"
+                    className="w-full h-32 p-1 text-center rounded-2xl shadow-custom-light "
                     src={imgUrl}
                   />
                 </div>
-                <div>{item.name}</div>
-                <div>{item.character}</div>
+                <div className="text-center">{item.name}</div>
+                <div className="text-[12px] text-center text-white/50">
+                  {item.character}
+                </div>
               </div>
             );
           })}

@@ -19,7 +19,6 @@ const Header = () => {
     window.scrollTo(0, 0);
   }, [location]);
 
-  console.log(window.scrollY);
   // On scroll menu hide or show ______________
 
   const controlNavbar = () => {

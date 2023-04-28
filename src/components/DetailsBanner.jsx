@@ -43,10 +43,12 @@ const DetailsBanner = ({ video, crew }) => {
               {/* _____Descriptions____ */}
               <div
                 style={{
-                  filter: '',
                   background: `linear-gradient(rgb(47 71 69 / 90%), rgb(18 30 50 / 89%)), url(${
                     url.backdrop + data?.backdrop_path
                   })`,
+                  backgroundRepeat: ' no-repeat',
+                  backgroundPosition: 'center',
+                  backgroundSize: 'cover',
                 }}
                 className="flex  flex-col md:flex-row w-[100%] mx-auto h-auto pt-12 lg:pt-16 "
               >
@@ -84,15 +86,15 @@ const DetailsBanner = ({ video, crew }) => {
                   </div>
 
                   <Genres className="mt-1" data={genres} />
-                  <div
-                    onClick={() => {
-                      setShow(true);
-                      setVideoId(video.key);
-                    }}
-                    className="flex items-center space-x-3"
-                  >
+                  <div className="flex items-center space-x-3">
                     <CircleRating rating={data.vote_average.toFixed(1)} />
-                    <div className="flex items-center space-x-3 cursor-pointer hover:text-blue-600">
+                    <div
+                      onClick={() => {
+                        setShow(true);
+                        setVideoId(video.key);
+                      }}
+                      className="flex items-center space-x-3 cursor-pointer hover:text-blue-600"
+                    >
                       <AiFillPlayCircle className="text-[52px] md:text-[56px] lg:text-[60px]" />
                       <span>Watch Trailer</span>
                     </div>
