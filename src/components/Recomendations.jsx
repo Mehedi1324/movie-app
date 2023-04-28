@@ -6,7 +6,6 @@ const Recomendations = ({ mediaType, id }) => {
   const { data, loading, error } = useFetch(
     `/${mediaType}/${id}/recommendations`
   );
-  console.log(data);
   const title = mediaType === 'tv' ? 'Similar Tv Shows' : 'Similar Movies';
   return (
     <div

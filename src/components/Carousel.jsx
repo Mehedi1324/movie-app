@@ -5,7 +5,7 @@ import 'slick-carousel/slick/slick-theme.css';
 import { useNavigate } from 'react-router-dom';
 import LazyLoading from './LazyLoading';
 import { useSelector } from 'react-redux';
-import PosterFallBack from '../../public/images/no-poster.png';
+import PosterFallBack from '/src/images/no-poster.png';
 import dayjs from 'dayjs';
 import CircleRating from './CircleRating';
 import Genres from './Genres';
@@ -87,7 +87,7 @@ const Carousel = ({ data, loading, endpoint, title }) => {
                 ? url.poster + item.poster_path
                 : PosterFallBack;
               return (
-                <div className="p-[8%] ">
+                <div className="p-[8%] " key={item.id}>
                   <div
                     onClick={() =>
                       navigate(`/${item.media_type || endpoint}/${item.id}`)

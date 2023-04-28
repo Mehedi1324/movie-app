@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import LazyLoading from './LazyLoading';
-import avatar from '../../public/images/avatar.png';
+import avatar from '/src/images/avatar.png';
 const Cast = ({ data, loading }) => {
   const { url } = useSelector((state) => state.home);
   const skeleton = () => {

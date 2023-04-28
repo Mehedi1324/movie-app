@@ -10,7 +10,7 @@ const VIdeoPopup = ({ show, setShow, videoId, setVideoId }) => {
     <div
       className={`${
         show
-          ? 'absolute top-0 bottom-0 left-0 right-0 bg-black/20 backdrop-blur-sm z-10'
+          ? 'fixed top-0 bottom-0 left-0 right-0 bg-black/20 backdrop-blur-sm z-10'
           : 'hidden'
       }`}
     >

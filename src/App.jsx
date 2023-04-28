@@ -17,6 +17,8 @@ function App() {
   // Fetch api and save it to store______________
 
   const { url } = useSelector((state) => state.home);
+
+  console.log(url);
   const fetchApiConfig = () => {
     fetchData('/configuration').then((res) => {
       const url = {

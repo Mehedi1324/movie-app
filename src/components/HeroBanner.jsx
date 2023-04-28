@@ -11,11 +11,10 @@ const HeroBanner = () => {
   const { url } = useSelector((state) => state.home);
   useEffect(() => {
     const bg =
-      url.backdrop +
+      url?.backdrop +
       data?.results?.[Math.floor(Math.random() * 20)]?.backdrop_path;
     setBannerBg(bg);
   }, [data]);
-
   const searchQueryHandler = (e) => {
     // e.preventDefault;
     if (e.key === 'Enter' && query.length > 0) {

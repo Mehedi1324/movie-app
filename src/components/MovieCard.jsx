@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import PosterFallBack from '../../public/images/no-poster.png';
+import PosterFallBack from '/src/images/no-poster.png';
 import LazyLoading from './LazyLoading';
 import dayjs from 'dayjs';
 import CircleRating from './CircleRating';

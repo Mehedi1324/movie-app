@@ -40,30 +40,30 @@ const SearchResuls = () => {
   }, [query]);
 
   return (
-    <div className="w-[90%]  m-auto text-white">
+    <div className="w-[90%] pt-20 m-auto text-white">
       {loading && <Spinner />}
       {!loading && (
-        <div>
+        <div className="">
           {data?.results?.length > 0 ? (
             <div>
-              <span>{`Search results of ${query}`}</span>
+              <span>
+                Search results of{' '}
+                <span className="text-2xl font-bold text-blue-500">
+                  {query}
+                </span>
+              </span>
               <InfiniteScroll
                 dataLength={data?.results.length || []}
                 next={fetchNextPageData}
                 hasMore={pageNum <= data?.total_pages}
                 loader={<Spinner />}
-                className="grid grid-cols-2 gap-8 my-10 text-white md:grid-cols-3 lg:grid-cols-5"
+                className="grid grid-cols-2 gap-8 p-5 my-5 text-white md:grid-cols-3 lg:grid-cols-5"
               >
                 {data?.results?.map((item, index) => {
                   if (item?.media_type === 'person') return;
                   return (
-                    <div>
-                      <MovieCard
-                        className=""
-                        key={index}
-                        data={item}
-                        fromSearch={true}
-                      />
+                    <div className="overflow-visible">
+                      <MovieCard key={index} data={item} fromSearch={true} />
                     </div>
                   );
                 })}
