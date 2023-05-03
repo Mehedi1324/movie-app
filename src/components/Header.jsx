@@ -108,7 +108,7 @@ const Header = () => {
           >
             <li
               onClick={() => navigateHandler('movie')}
-              className="cursor-pointer  hover:text-red-800"
+              className="cursor-pointer hover:text-red-800"
             >
               Movies
             </li>
