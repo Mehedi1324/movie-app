@@ -151,7 +151,7 @@ const Explore = () => {
         <>
           {data?.results?.length > 0 ? (
             <InfiniteScroll
-              className="grid grid-cols-2 gap-8 my-10 text-white md:grid-cols-3 lg:grid-cols-5"
+              className="grid grid-cols-2 gap-8 p-5 my-10 text-white md:grid-cols-3 lg:grid-cols-5"
               dataLength={data?.results?.length || []}
               next={fetchNextPageData}
               hasMore={pageNum <= data?.total_pages}

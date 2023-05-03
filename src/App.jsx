@@ -18,7 +18,6 @@ function App() {
 
   const { url } = useSelector((state) => state.home);
 
-  console.log(url);
   const fetchApiConfig = () => {
     fetchData('/configuration').then((res) => {
       const url = {

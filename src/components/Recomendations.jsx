@@ -12,7 +12,7 @@ const Recomendations = ({ mediaType, id }) => {
       className={`${
         data?.results?.length === 0
           ? 'hidden'
-          : 'relative space-y-6 my-10 text-white/50 w-[90%] mx-auto'
+          : 'relative space-y-4 my-10 text-white/50 w-[90%] mx-auto'
       } `}
     >
       <div className="flex items-center justify-between">

@@ -86,29 +86,29 @@ const Header = () => {
 
   return (
     <div
-      className={`${
-        show ? `fixed ${menuBgSolid}` : 'hidden'
-      }   w-full backdrop-brightness-75 backdrop-blur-lg left-0  top-0 flex  items-center z-10  text-[14px] justify-between px-5 text-white m-0  py-2`}
+      className={`${show ? `fixed ${menuBgSolid}` : 'hidden'} ${
+        mobileMenu && 'bg-gray-950'
+      }   w-full backdrop-brightness-75 h-14 backdrop-blur-lg left-0  top-0 flex  items-center z-10  text-[14px] justify-between px-5 text-white m-0  py-2`}
     >
       <div onClick={() => navigate('/')} className="cursor-pointer">
-        <img src="../images/movie.png" alt="logo" />
+        <img src="/src/images/movie.png" alt="logo" />
       </div>
       <ul className="flex items-center space-x-5 ">
         <div
           className={` md:inline  ${
             mobileMenu
-              ? 'absolute  left-0 px-10 top-14 w-full z-10 py-4 bg-gray-900 '
+              ? 'absolute left-0 px-10 top-14 w-full z-10 py-4 bg-gray-900 '
               : 'hidden'
           } `}
         >
           <span
             className={`${
-              mobileMenu && 'flex-col space-y-3 space-x-0'
+              mobileMenu && 'flex-col space-y-3 space-x-[0px]'
             } flex space-x-5 `}
           >
             <li
               onClick={() => navigateHandler('movie')}
-              className="cursor-pointer hover:text-red-800"
+              className="cursor-pointer  hover:text-red-800"
             >
               Movies
             </li>

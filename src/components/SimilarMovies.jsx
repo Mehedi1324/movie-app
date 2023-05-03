@@ -7,8 +7,11 @@ const SimilarMovies = ({ mediaType, id }) => {
   const title = mediaType === 'tv' ? 'Similar Tv Shows' : 'Similar Movies';
   return (
     <div
-      className="relative space-y-2 my-10 text-white/50 w-[90%] mx-auto
-  "
+      className={`${
+        data?.results?.length === 0
+          ? 'hidden'
+          : 'relative space-y-4 my-10 text-white/50 w-[90%] mx-auto'
+      } `}
     >
       <div className="flex items-center justify-between">
         <span className="text-3xl font-bold">Top Rated</span>
