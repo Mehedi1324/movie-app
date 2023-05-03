@@ -97,7 +97,7 @@ const Header = () => {
         <div
           className={` md:inline  ${
             mobileMenu
-              ? 'absolute left-0 px-10 top-14 w-full z-10 py-4 bg-gray-900 '
+              ? 'absolute left-0 px-10 top-14 w-full z-10 py-4 bg-gray-950 '
               : 'hidden'
           } `}
         >
